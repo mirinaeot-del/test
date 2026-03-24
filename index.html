@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네온 지렁이 게임</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="score-card">
+                <span class="label">SCORE</span>
+                <span class="value" id="score">0</span>
+            </div>
+            <h1 class="game-title">NEON SNAKE</h1>
+            <div class="score-card">
+                <span class="label">BEST</span>
+                <span class="value" id="high-score">0</span>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div class="canvas-container">
+                <canvas id="game-canvas" width="400" height="400"></canvas>
+                
+                <div id="overlay" class="overlay active">
+                    <h2 id="overlay-title" class="overlay-title">지렁이 게임</h2>
+                    <p id="overlay-desc" class="overlay-desc">방향키나 WASD를 사용하여 뱀을 조종하세요.</p>
+                    <button id="action-btn" class="glow-btn">게임 시작</button>
+                    
+                    <div class="kbd-container" id="kb-hints">
+                        <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Mobile Controls for better accessibility -->
+        <div class="mobile-controls d-none">
+            <button class="d-pad-btn up" id="btn-up">▲</button>
+            <div class="d-pad-row">
+                <button class="d-pad-btn left" id="btn-left">◀</button>
+                <button class="d-pad-btn down" id="btn-down">▼</button>
+                <button class="d-pad-btn right" id="btn-right">▶</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
